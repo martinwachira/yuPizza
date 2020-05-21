@@ -22,3 +22,8 @@ Route::apiResource('/customer', 'CustomerController');
 Route::post('/addcustomer', 'CustomerController@store');
 Route::get('/customer/{customer}', 'CustomerController@index');
 
+// Route::apiResource('/pizza', 'PizzaController');
+Route::resource('/pizza', 'PizzaController')->except(["create", "edit"]);
+Route::get('/getpizzas', 'PizzaController@index');
+
+Route::resource('/order', "OrderController");
