@@ -57,6 +57,19 @@ class CustomerController extends Controller
         return response('Something went wrong', 504);
     }
 
+    public function login(Request $request){
+        $this->validate($request, [
+            "name" => "required|exists:customers,name",
+            "phoneNo" => "required|min:5|max:50"
+        ]);
+
+        $user = Customer::where('name', '=', $request->name)->get();
+        if ($user->phoneNo) {
+            return response('', 500);
+        }
+        return response(new CustomerResource($user), 200);
+    }
+
     /**
      * Display the specified resource.
      *

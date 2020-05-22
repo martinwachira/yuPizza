@@ -15,10 +15,13 @@ class PizzaController extends Controller
      */
     public function index()
     {
-        return PizzaResource::collection(Pizza::paginate(10));
+        // return PizzaResource::collection(Pizza::all());
         // return response (new PizzaResource($pizza), 200);
         // $pizzas = Pizza::all();
         // return $pizzas;
+
+        $pizzas = Pizza::all();
+        return response()->json($pizzas);
     }
 
     /**
