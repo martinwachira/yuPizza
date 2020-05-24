@@ -19,13 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/customer', 'CustomerController');
+Route::apiResource('/pizza', 'PizzaController');
+Route::apiResource('/order', "OrderController");
+
 Route::post('/addcustomer', 'CustomerController@store');
 Route::post('/login', 'CustomerController@login');
 Route::get('/customer/{customer}', 'CustomerController@index');
 
 // Route::apiResource('/pizza', 'PizzaController');
-Route::apiResource('/pizza', 'PizzaController')->except(["create", "edit"]);
-Route::get('/pizzas', 'PizzaController@index')->name('pizzas.all');;
+Route::get('/pizzas/{pizza}', 'PizzaController@show');
 
-Route::apiResource('/order', "OrderController");
 Route::post('/saveorder', "OrderController@store");
