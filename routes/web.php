@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/pizza', 'PizzaController');
+Route::get('/pizza', 'PizzaController@index')->name('pizza');

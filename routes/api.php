@@ -30,3 +30,5 @@ Route::get('/customer/{customer}', 'CustomerController@index');
 Route::get('/pizzas/{pizza}', 'PizzaController@show');
 
 Route::post('/saveorder', "OrderController@store");
+
+Route::get('/', 'PizzaController@index');

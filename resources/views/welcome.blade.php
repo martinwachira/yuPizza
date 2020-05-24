@@ -81,19 +81,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Yummi Pizza
+                    <hr>
                 </div>
 
+                <div class="content-fluid">
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <h3><a href="{{ '/pizza' }}">Pizza List</a></h3>
+                <br><br>
+               <span style="color: maroon">Developed by: <a href="https://github.com/martinwachira/"> martin wachira</a></span>
                 </div>
+            </div>
             </div>
         </div>
     </body>
