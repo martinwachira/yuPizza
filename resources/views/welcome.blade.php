@@ -89,7 +89,7 @@
                 <div class="links">
                 <h3><a href="{{ '/pizza' }}">Pizza List</a></h3>
                 <br><br>
-               <span style="color: maroon">Developed by: <a href="https://github.com/martinwachira/"> martin wachira</a></span>
+               <span style="color: maroon">Developed by: <a href="https://github.com/martinwachira/"> martin wachira.</a></span>
                 </div>
             </div>
             </div>
