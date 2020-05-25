@@ -33,6 +33,6 @@ Route::post('/saveorder', "OrderController@store");
 
 // Route::get('/', 'PizzaController@index');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
