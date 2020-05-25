@@ -19,6 +19,7 @@ class CustomerResource extends JsonResource
             "name" => $this->name,
             "phoneNo " => $this->phoneNo,
             "currentAddress" => $this->currentAddress,
+            "password" => $this->password
         ];
     }
 }

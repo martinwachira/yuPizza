@@ -42,7 +42,8 @@ class CustomerController extends Controller
             "name" => "required|min:3|max:15",
             "email" => "required|email|unique:users,email",
             "phoneNo" => "required|digits:11",
-            "currentAddress" => "required|min:6|max:50"
+            "currentAddress" => "required|min:6|max:50",
+            "password" => "required|min:4"
         ]);
         \DB::beginTransaction();
         $customer = new Customer();
@@ -60,11 +61,11 @@ class CustomerController extends Controller
     public function login(Request $request){
         $this->validate($request, [
             "name" => "required|exists:customers,name",
-            "phoneNo" => "required|min:5|max:50"
+            "password" => "required|min:5|max:50"
         ]);
 
-        $user = Customer::where('name', '=', $request->name)->get();
-        if ($user->phoneNo) {
+        $user = Customer::where('name', '=', $request->name, 'password', '=', $request->password) ->get();
+        if ($user->password) {
             return response('', 500);
         }
         return response(new CustomerResource($user), 200);
